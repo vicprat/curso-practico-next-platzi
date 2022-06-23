@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import AppContext from '@context/AppContext';
-import close from '@icons/icon_close.png'
-import styles from "@styles/OrderItem.module.scss"
+import close from '@icons/icon_close.png';
+import styles from '@styles/OrderItem.module.scss';
 
 const OrderItem = ({ product }) => {
 	const { removeFromCart } = useContext(AppContext);
@@ -17,7 +17,7 @@ const OrderItem = ({ product }) => {
 			</figure>
 			<p>{product.title}</p>
 			<p>${product.price}</p>
-			<img className="pointer more-clickable-area" src={close} alt="close" onClick={() => handleRemove(product)} />
+			<img className={styles.pointer, styles['more-clickable-area']} src={close} alt="close" onClick={() => handleRemove(product)} />
 		</div>
 	);
 }
