@@ -26,8 +26,7 @@ const ProductItem = ({ product }) => {
 						className={styles.disabled, styles['add-to-cart-btn']}
 						src={addedToCartImage}
 						alt="added to cart"
-						height={30} width={30}
-					/> : <Image className={styles['add-to-cart-btn'], styles.pointer} src={addToCartImage} alt="add to cart" height={30} width={30} />}
+					/> : <Image className={styles['add-to-cart-btn'], styles.pointer} src={addToCartImage} alt="add to cart" />}
 				</figure>
 			</div>
 		</div>

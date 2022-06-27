@@ -1,9 +1,10 @@
 module.exports = {
-    semi: ture,
+    semi: true,
     singleQuote: true,
-    prinWidth: 200,
+    printWidth: 200,
     tabWidth: 2,
     useTabs: false,
-    trailingComa: 'es5',
+    trailingComma: 'es5',
     bracketSpacing: true,
 }
+

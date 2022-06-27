@@ -18,7 +18,7 @@ const Header = () => {
 				<Image src={menu} alt="menu" className={styles.menu} />
 				<div className={styles['navbar-left']}>
 					<Link href="/">
-					<Image src={logo} alt="logo" className={styles['nav-logo']} />
+						<Image src={logo} alt="logo" className={styles['nav-logo']} />
 					</Link>
 					<ul>
 						<li>
