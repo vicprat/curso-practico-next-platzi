@@ -1,14 +1,14 @@
 import React from 'react';
 import OrderItem from '@components/OrderItem';
-import styles from '@styles/Checkout.module.scss';
+import '@styles/Checkout.scss';
 
 const Checkout = () => {
 	return (
-		<div className={styles.Checkout}>
-			<div className={styles['Checkout-container']}>
-				<h1 className={styles.title}>My order</h1>
-				<div className={styles['Checkout-content']}>
-					<div className={styles.order}>
+		<div className="Checkout">
+			<div className="Checkout-container">
+				<h1 className="title">My order</h1>
+				<div className="Checkout-content">
+					<div className="order">
 						<p>
 							<span>03.25.21</span>
 							<span>6 articles</span>
@@ -20,6 +20,6 @@ const Checkout = () => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Checkout;

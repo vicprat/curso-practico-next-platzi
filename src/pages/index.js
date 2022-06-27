@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>React Shop</title>
       </Head>
-      <ProductList />
+      <ProductList />;
     </>
   );
 }

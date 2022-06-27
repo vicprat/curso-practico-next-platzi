@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import Menu from '@components/Menu';
 import MyOrder from '@containers/MyOrder';
 import menu from '@icons/icon_menu.svg';
@@ -15,41 +15,47 @@ const Header = () => {
   return (
     <>
       <nav className={styles.Nav}>
-        <Image src={menu} alt="menu" className={styles.menu} />
+        <img src={menu.src} alt="menu" className={styles.menu} />
         <div className={styles['navbar-left']}>
-          <Link href="/">
-            <Image src={logo} alt="logo" className={styles['nav-logo']} />
+          <Link href="/" passHref>
+            <a href={"/"}>
+              <Image  src={logo} alt="logo" className={styles['nav-logo']} />
+            </a>
           </Link>
           <ul>
             <li>
-              <Link href="/">All</Link>
+              <Link href={"/"}>All</Link>
             </li>
             <li>
-              <Link href="/">Clothes</Link>
+            <Link href={"/"} >Clothes</Link>
             </li>
             <li>
-              <Link href="/">Electronics</Link>
+              <Link href={"/"} >Electronics</Link>
             </li>
             <li>
-              <Link href="/">Furnitures</Link>
+            <Link href={"/"} >Furnitures</Link>
             </li>
             <li>
-              <Link href="/">Toys</Link>
+            <Link href={"/"} >Toys</Link>
             </li>
             <li>
-              <Link href="/">Others</Link>
+            <Link href={"/"} >Others</Link>
             </li>
           </ul>
         </div>
         <div className={styles['navbar-right']}>
           <ul>
-            <button className={(styles['more-clickable-area'], styles['navbar-email'], styles.pointer)} onClick={() => toggleMenu()}>
+            <li className={(styles['more-clickable-area'], styles['navbar-email'], styles.pointer)} onClick={() => toggleMenu()} role="presentation">
               platzi@example.com
-            </button>
-            <button className={styles['navbar-shopping-cart']} onClick={() => toggleOrder()}>
+            </li>
+            <li
+              // className={styles.['navbar-shopping-cart']}
+              onClick={() => toggleOrder()}
+              role="presentation"
+            >
               <Image className={(styles['more-clickable-area'], styles.pointer)} src={shoppingCart} alt="shopping cart" />
               {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
-            </button>
+            </li>
           </ul>
         </div>
         {state.menuIsOpen && <Menu />}
