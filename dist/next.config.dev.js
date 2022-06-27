@@ -1,10 +1,11 @@
+"use strict";
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+var nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['placeimg.com', 'api.lorem.space', 'vuzoon.com', 'www.complementosdelcafe.com'],
-  },
-  // env: {
+    domains: ['placeimg.com', 'api.lorem.space', 'vuzoon.com', 'www.complementosdelcafe.com']
+  } // env: {
   //   customKey: 'customValue',
   // },
   // basePath: '/dist',
@@ -18,6 +19,6 @@ const nextConfig = {
   //     }
   //   ]
   // }
-}
 
-module.exports = nextConfig
+};
+module.exports = nextConfig;
